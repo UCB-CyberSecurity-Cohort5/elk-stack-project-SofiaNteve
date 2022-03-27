@@ -15,55 +15,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-  ---
-  - name: Configure Elk VM wih Docker
-    hosts: elk
-    remote_user: RedAdmin
-    become: true
-    tasks:
-  
-    - name: Install docker.io
-      apt:
-        update_cache: yes
-        name: docker.io
-        state: present
-
-    - name: Install python3-pip
-      apt:
-        force_apt_get: yes
-        name: python3-pip
-        state: present
-   
-    - name: Install Docker Module
-      pip: 
-        name: Docker module
-        state: present
-
-    - name: Increase Virtual memory
-      command: sysctl -w vm.max_map_count=262144
-
-    - name: Use more memory
-      sysctl:
-        name: vm.max_map_count
-        value: '262144'
-        state: present
-        reload: yes
-
-    - name: download and launch a docker elk container
-      docker_container:
-        name: elk
-        image: sebp/elk:761
-        state: started
-        restart_policy: always
-        published_ports:
-          - 5601:5601
-          - 9200:9200
-          - 5044:5044
-
-    - name: Enable service docker on boot
-      systemd: 
-        name: docker
-        enabled: yes
+![image](https://user-images.githubusercontent.com/94946212/160295810-92ab6016-a391-426a-aa7d-23199b9eb3bb.png)
 
 This document contains the following details:
 - Description of the Topologu
