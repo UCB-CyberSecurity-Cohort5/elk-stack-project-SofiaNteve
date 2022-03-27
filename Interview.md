@@ -60,7 +60,7 @@ to the virtual networks by setting the source IP address to the destination of v
 
 was set to 22 and protocol set to any. I allowed Elk to be accessible by my PC by setting the source IP
 
-address to 20.112.108.76, the destination to the virtual network. The port was 5601 and protocol was
+address to 20.112.108.176, the destination to the virtual network. The port was 5601 and protocol was
 
 set to any.
 
