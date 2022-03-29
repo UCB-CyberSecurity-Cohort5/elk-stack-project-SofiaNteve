@@ -21,6 +21,15 @@ You will have three tasks:
 
 3. Generate a high amount of web requests to your pen-testing servers and make sure that Kibana is picking them up.
 
+![image](https://user-images.githubusercontent.com/94946212/160520710-19abf563-386a-45f9-b049-f6ac4923e13b.png)
+
+![image](https://user-images.githubusercontent.com/94946212/160520721-1ac4c7a0-c137-4f71-b363-5fcb8f75b803.png)
+
+![image](https://user-images.githubusercontent.com/94946212/160520761-f933f2d6-706d-44a7-a623-27e46340872a.png)
+
+
+
+
 
 These activities will guide you though generating some data to visualize in Kibana. Each of these activity will require the following high level steps: 
 
@@ -28,6 +37,11 @@ These activities will guide you though generating some data to visualize in Kiba
 2. Use a Linux utility to stress the system of a webVM directly. 
 3. Subsequently generate traffic and logs that Kibana will collect.
 4. View that traffic in various ways inside Kibanna.
+
+![image](https://user-images.githubusercontent.com/94946212/160520944-d30b250a-5a68-44d5-acb3-87b413148f63.png)
+
+![image](https://user-images.githubusercontent.com/94946212/160520971-341d1f58-a290-4f79-864d-73f208b234d6.png)
+
 
 
 It's also worth noting that these activities comprise different job roles:
@@ -56,26 +70,40 @@ These pages will show you the changes in data that we will create.
 - Click **Logs** to see some general system logs coming from the web machines.
 
     ![](Images/Logs-General.png)
+    
+    ![image](https://user-images.githubusercontent.com/94946212/160521853-8f819570-dba9-44fb-8a21-455629d4c328.png)
+
 
 - Notice that you can stream logs live from the machines. 
 
     ![](Images/Stream-Live.png)
+    
+    ![image](https://user-images.githubusercontent.com/94946212/160521981-c7a5b075-ed75-430d-8833-571d66b9facb.png)
+
 
 #### Metrics
 
 - Next, click **Metrics** on the left side. 
 
     - Here we can see each of our VMs that are sending metrics.
+      
 
 - Click on one of the large squares that represent one of your VMs.
 
 - Choose **View metrics** from the dropdown that appears.
 
     ![](Images/Metric-VM-Dropdown.png)
+    
+    ![image](https://user-images.githubusercontent.com/94946212/160522162-551e07af-8930-4071-b6bc-e86a5b598654.png)
 
 - Notice that you can see CPU and memory usage here.
 
     ![](Images/Host-Overview.png)
+    
+    ![image](https://user-images.githubusercontent.com/94946212/160522116-e27efb73-fb3e-4f3b-82c2-b6069a96bf60.png)
+
+    ![image](https://user-images.githubusercontent.com/94946212/160522052-86a357f1-ac70-42d6-a6e5-6929e6b063b4.png)
+    
 
 Now that we know where to look for this data, let's generate some unusual network traffic.
 
@@ -154,7 +182,7 @@ Task: Generate a high amount of CPU usage on the pentesting machines and verify 
 
 
 **Your Task**: Generate a high amount of CPU usage on the pentesting machines and verify that Kibana picks up this data.
-
+	
 ---
 
 #### Notes
@@ -178,8 +206,15 @@ Linux has a common, easy-to-use diagnostic program called `stress`. It is easy t
 4. Run `sudo stress --cpu 1` and allow `stress` to run for a few minutes. 
 
 5. View the Metrics page for that VM in Kibana.  What indicates that CPU usage increased?
+	
+![image](https://user-images.githubusercontent.com/94946212/160521385-50eb0233-cdcc-4d27-85ef-7bb9f3008cac.png)
+
 
 6. Run the `stress` program on all three of your VMs and take screenshots of the data generated on the Metrics page of Kibana.
+	
+![image](https://user-images.githubusercontent.com/94946212/160521234-6e9cc6be-0fe7-4c2b-9f01-e681ed9316ea.png)
+	
+![image](https://user-images.githubusercontent.com/94946212/160521273-e86d0112-af59-46e0-b530-392bc17c1e28.png)
 
   	- **Note:** The stress program will run until you quit with Ctrl+C.
 </details>
@@ -262,6 +297,13 @@ We can generate abnormal data to view by creating a DoS web attack. The command-
 **Bonus**: Write a nested loop that sends your `wget` command to all three of your web VMs over and over.
 
 </details>
+
+![image](https://user-images.githubusercontent.com/94946212/160521465-b350e232-1c8c-46e8-9922-9b0147cb8cb5.png)
+
+![image](https://user-images.githubusercontent.com/94946212/160521483-7ca9427c-60bb-4aba-8b9f-a3355c902ce1.png)
+
+![image](https://user-images.githubusercontent.com/94946212/160521513-af900402-f304-4602-8ebb-9bb936284a4c.png)
+
 
 
 ---
